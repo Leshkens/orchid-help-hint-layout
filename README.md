@@ -40,7 +40,7 @@ Then add it to the hint map (in config/platform-hints.php):
     ],
 
 
-And add an entry to the database in `http://yousite.loc/dashboard/systems/help-hints/create`
+Grant the user rights to hints and add an entry to the database in `http://yousite.loc/dashboard/systems/help-hints/create`
 
 
 
