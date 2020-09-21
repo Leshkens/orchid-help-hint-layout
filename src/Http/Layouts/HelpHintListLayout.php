@@ -74,6 +74,7 @@ class HelpHintListLayout extends Table
 
             TD::set('id', '')
                 ->align('right')
+                ->cantHide()
                 ->render(function (Model $model) {
                     return DropDown::make()
                             ->icon('options-vertical')
