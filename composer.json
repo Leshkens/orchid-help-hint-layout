@@ -1,0 +1,51 @@
+{
+  "name": "leshkens/orchid-help-hint-layout",
+  "description": "Orchid help hint layout",
+  "license": "MIT",
+  "keywords": [
+    "orchid",
+    "hint",
+    "help",
+    "layout"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Leshkens",
+      "email": "web@achugunov.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "illuminate/support": "^8.0",
+    "orchid/platform": "^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Leshkens\\OrchidHelpHintLayout\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Leshkens\\OrchidHelpHintLayout\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Leshkens\\OrchidHelpHintLayout\\Providers\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
