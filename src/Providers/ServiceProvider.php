@@ -82,11 +82,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->dashboard->addPublicDirectory(self::PACKAGE_NAME,
             self::PACKAGE_PATH . '/public');
 
-        View::composer('platform::app', function () {
-            $this->dashboard
-                ->registerResource('stylesheets', orchid_mix('/css/orchid_help_hint_layout.css', self::PACKAGE_NAME));
-        });
-
         return $this;
     }
 }
