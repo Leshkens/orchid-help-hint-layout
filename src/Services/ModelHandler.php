@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Leshkens\OrchidHelpHintLayout\Services;
 
 use Illuminate\Database\Eloquent\Model;
+use Leshkens\OrchidHelpHintLayout\Models\HelpHint;
 
 /**
  * Class ModelHandler
@@ -21,10 +22,14 @@ class ModelHandler
     /**
      * HelpHintService constructor.
      *
-     * @param string $class
+     * @param string|null $class
      */
-    public function __construct(string $class)
+    public function __construct(?string $class)
     {
+        if (is_null($class)) {
+            $class = HelpHint::class;
+        }
+
         $this->model = new $class;
     }
 
