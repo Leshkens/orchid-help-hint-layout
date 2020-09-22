@@ -26,22 +26,24 @@ php artisan vendor:publish --provider="Leshkens\OrchidHelpHintLayout\Providers\S
 
 It easy. Add to you screen:
 
-    public function layout(): array
-    {
-        return [
-            HelpHintLayout::make('foobar')
-        ];
-    }
+```php
+public function layout(): array
+{
+    return [
+        HelpHintLayout::make('foobar')
+    ];
+}
+```
 
-Then add it to the hint map (in config/platform-hints.php):
+Then add it to the hint map (in `config/platform-hints.php`):
 
-    'hints_map' => [
-        'foobar' => 'My hint is somewhere'
-    ],
-
+```php
+'hints_map' => [
+    'foobar' => 'My hint is somewhere'
+],
+```
 
 Grant the user rights to hints and add an entry to the database in `http://yousite.loc/dashboard/systems/help-hints/create`
-
 
 
 ## Credits
