@@ -15,24 +15,8 @@ use Illuminate\Support\Facades\View;
  *
  * @package Leshkens\OrchidHelpHintLayout\Providers
  */
-class PlatformProvider extends \Illuminate\Support\ServiceProvider
+class PlatformProvider extends \Orchid\Platform\OrchidServiceProvider
 {
-    /**
-     * @param Dashboard $dashboard
-     */
-    public function boot(Dashboard $dashboard): void
-    {
-        View::composer('platform::systems', function () use ($dashboard) {
-            foreach ($this->registerSystemMenu() as $itemMenu) {
-                $dashboard->menu->add(Menu::SYSTEMS, $itemMenu);
-            }
-        });
-
-        foreach ($this->registerPermissions() as $permission) {
-            $dashboard->registerPermissions($permission);
-        }
-    }
-
     /**
      * @return ItemMenu[]
      */
@@ -65,12 +49,5 @@ class PlatformProvider extends \Illuminate\Support\ServiceProvider
             ItemPermission::group(__('Systems'))
                 ->addPermission('platform.systems.help-hints', __('Help hints'))
         ];
-    }
-
-    /**
-     *
-     */
-    public function register()
-    {
     }
 }

@@ -25,7 +25,7 @@ class HelpHintService
      */
     public function __construct()
     {
-        $this->model = app(ModelHandler::class)->getModel();
+        $this->model = app(ModelService::class)->getModel();
     }
 
     /**

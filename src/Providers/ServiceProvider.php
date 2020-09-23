@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Leshkens\OrchidHelpHintLayout\Providers;
 
-use Leshkens\OrchidHelpHintLayout\Services\ModelHandler;
+use Leshkens\OrchidHelpHintLayout\Services\ModelService;
 use Orchid\Platform\Dashboard;
 
 /**
@@ -63,8 +63,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->loadJsonTranslationsFrom(self::PACKAGE_PATH . 'resources/lang');
 
-        $this->app->singleton(ModelHandler::class, function () {
-            return new ModelHandler(config('platform-hints.model'));
+        $this->app->singleton(ModelService::class, function () {
+            return new ModelService(config('platform-hints.model'));
         });
 
         $this->app->register(RouteServiceProvider::class);

@@ -2,9 +2,9 @@
 
 ![screenshot](https://user-images.githubusercontent.com/8939383/93819753-93d7fb80-fc75-11ea-9a14-d6af37393527.png)
 
-**Requires**: Orchid Platform ^8.0
-
 ## Installation
+
+**Requires**: Orchid Platform ^8.0
 
 Install via composer:
 ```bash

@@ -12,7 +12,7 @@ use Leshkens\OrchidHelpHintLayout\Models\HelpHint;
  *
  * @package Leshkens\OrchidHelpHintLayout\Services
  */
-class ModelHandler
+class ModelService
 {
     /**
      * @var Model
