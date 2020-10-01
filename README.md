@@ -4,12 +4,13 @@
 
 ## Installation
 
-**Requires**: Orchid Platform ^8.0
-
 Install via composer:
-```bash
-composer require leshkens/orchid-help-hint-layout
-```
+
+| Orchid version                     | Composer command                                  |
+|-------------------------------------|---------------------------------------------------|
+| Orchid 9.x | `composer require leshkens/orchid-help-hint-layout:^2.0` |
+| Orchid 8.x | `composer require leshkens/orchid-help-hint-layout:^1.0` |
+
 
 Install package migration:
 ```bash

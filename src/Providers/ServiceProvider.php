@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Leshkens\OrchidHelpHintLayout\Providers;
 
-use Leshkens\OrchidHelpHintLayout\Services\ModelService;
 use Orchid\Platform\Dashboard;
+use Leshkens\OrchidHelpHintLayout\Services\ModelService;
 
 /**
  * Class ServiceProvider
@@ -37,7 +37,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     /**
      * @param Dashboard $dashboard
      */
-    public function boot(Dashboard $dashboard)
+    public function boot(Dashboard $dashboard): void
     {
         $this->dashboard = $dashboard;
 
@@ -54,7 +54,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     /**
      *
      */
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(
             self::CONFIG_PATH,
@@ -70,5 +70,4 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(PlatformProvider::class);
     }
-
 }

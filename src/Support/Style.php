@@ -11,12 +11,13 @@ use MyCLabs\Enum\Enum;
  *
  * @package Leshkens\OrchidHelpHintLayout\Support
  */
-class Color
+class Style
 {
     /**
      * @var string[]
      */
     protected $types = [
+        'none',
         'info',
         'success',
         'warning',
@@ -31,6 +32,7 @@ class Color
     public static function widthTitles(): array
     {
         return array_combine((new static)->types, [
+            __('Without style'),
             __('Blue'),
             __('Green'),
             __('Yellow'),

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Leshkens\OrchidHelpHintLayout\Http\Layouts;
 
 use Leshkens\OrchidHelpHintLayout\Services\HelpHintService;
-use Leshkens\OrchidHelpHintLayout\Support\Color;
+use Leshkens\OrchidHelpHintLayout\Support\Style;
 use Orchid\Screen\Field;
 use Orchid\Screen\Fields\Code;
 use Orchid\Screen\Fields\Group;
@@ -46,7 +46,7 @@ class HelpHintEditLayout extends Rows
                 Select::make('hint.type')
                     ->title(__('Style'))
                     ->required()
-                    ->options(Color::widthTitles())
+                    ->options(Style::widthTitles())
                     ->help(__('Color scheme'))
             ]),
 

@@ -7,7 +7,7 @@ namespace Leshkens\OrchidHelpHintLayout\Http\Requests;
 use Leshkens\OrchidHelpHintLayout\Services\HelpHintService;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
-use Leshkens\OrchidHelpHintLayout\Support\Color;
+use Leshkens\OrchidHelpHintLayout\Support\Style;
 
 /**
  * Class SaveHelpHintRequest
@@ -39,7 +39,7 @@ class SaveHelpHintRequest extends FormRequest
             ],
             'hint.type' => [
                 'required',
-                Rule::in(Color::getTypes()),
+                Rule::in(Style::getTypes()),
             ],
             'hint.heading'    => 'string|nullable',
             'hint.is_visible' => 'required|boolean',

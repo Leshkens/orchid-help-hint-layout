@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Leshkens\OrchidHelpHintLayout\Http\Layouts;
 
 use Illuminate\Database\Eloquent\Model;
-use Leshkens\OrchidHelpHintLayout\Support\Color;
+use Leshkens\OrchidHelpHintLayout\Support\Style;
 use Orchid\Screen\Actions\DropDown;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\TD;
@@ -68,7 +68,7 @@ class HelpHintListLayout extends Table
                 ->render(function (Model $model) {
                     return view('orchid-help-hint-layout::partials.badge', [
                         'type' => $model->type,
-                        'color' => Color::getTitle($model->type)
+                        'color' => Style::getTitle($model->type)
                     ]);
                 }),
 
