@@ -22,13 +22,18 @@ class HelpHintLayout extends Layout
     protected $hint;
 
     /**
+     * @var bool
+     */
+    protected $canSee;
+
+    /**
      * @param Repository $repository
      *
      * @return mixed|void
      */
     public function build(Repository $repository)
     {
-        if (is_null($this->hint)) {
+        if (is_null($this->hint) || !$this->canSee) {
             return;
         }
 
@@ -37,15 +42,18 @@ class HelpHintLayout extends Layout
         ]);
     }
 
+
     /**
      * @param string $slug
+     * @param bool   $canSee
      *
-     * @return $this
+     * @return static
      */
-    public static function make(string $slug): self
+    public static function make(string $slug, bool $canSee = true): self
     {
         $static = new static;
 
+        $static->canSee = $canSee;
         $static->hint = HelpHintService::getBySlug($slug);
 
         return $static;
