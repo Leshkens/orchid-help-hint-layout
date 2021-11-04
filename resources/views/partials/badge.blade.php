@@ -1,3 +1,3 @@
-<span class="badge-pill badge-{{ $type }}">
+<span class="badge rounded-pill bg-{{ $type }}">
     {{ __($color) }}
 </span>

@@ -44,7 +44,7 @@ class HelpHintListLayout extends Table
     protected function columns(): array
     {
         return [
-            TD::set('id', __('Location'))
+            TD::make('id', __('Location'))
                 ->render(function (Model $model) {
 
                     $config = config('platform-hints.hints_map');
@@ -54,7 +54,7 @@ class HelpHintListLayout extends Table
                     }
                 }),
 
-            TD::set('is_visible', __('Visibility'))
+            TD::make('is_visible', __('Visibility'))
                 ->align('center')
                 ->render(function (Model $model) {
                     if ($model->is_visible) {
@@ -63,7 +63,7 @@ class HelpHintListLayout extends Table
                     return  __('No');
                 }),
 
-            TD::set('type', __('Color scheme'))
+            TD::make('type', __('Color scheme'))
                 ->align('center')
                 ->render(function (Model $model) {
                     return view('orchid-help-hint-layout::partials.badge', [
@@ -72,7 +72,7 @@ class HelpHintListLayout extends Table
                     ]);
                 }),
 
-            TD::set('id', '')
+            TD::make('id', '')
                 ->align('right')
                 ->cantHide()
                 ->render(function (Model $model) {

@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Leshkens\OrchidHelpHintLayout\Providers;
 
-use Orchid\Platform\Menu;
 use Orchid\Platform\Dashboard;
-use Orchid\Platform\ItemMenu;
+use Orchid\Screen\Actions\Menu;
 use Orchid\Platform\ItemPermission;
 use Illuminate\Support\Facades\View;
 
@@ -20,23 +19,14 @@ class PlatformProvider extends \Orchid\Platform\OrchidServiceProvider
     /**
      * @return ItemMenu[]
      */
-    public function registerSystemMenu(): array
+    public function registerMainMenu(): array
     {
         return [
-            ItemMenu::label(__('Help hints'))
-                ->icon('support')
-                ->slug('HelpHints')
-                ->active('platform.systems.*')
-                ->permission('platform.systems.index')
-                ->sort(9000),
-
-            ItemMenu::label(__('Hints'))
-                ->place('HelpHints')
+            Menu::make(__('Hints list'))
                 ->icon('list')
                 ->route('platform.systems.help-hints')
                 ->permission('platform.systems.help-hints')
-                ->sort(9000)
-                ->title(__('Hints list')),
+                ->title(__('Help hints'))
         ];
     }
 

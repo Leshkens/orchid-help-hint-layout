@@ -26,6 +26,6 @@ Route::screen('/', HelpHintListScreen::class)
     ->name('systems.help-hints')
     ->breadcrumbs(function (Trail $trail) {
         $trail
-            ->parent('platform.systems.index')
+            ->parent('platform.index')
             ->push(__('Hints'), route('platform.systems.help-hints'));
     });

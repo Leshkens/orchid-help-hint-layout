@@ -1,10 +1,15 @@
-# Orchid Help Hints Layout
+# Orchid Help Hints Layout package
 
-![screenshot](https://user-images.githubusercontent.com/8939383/93819753-93d7fb80-fc75-11ea-9a14-d6af37393527.png)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/leshkens/orchid-help-hint-layout.svg?style=flat-square)](https://packagist.org/packages/leshkens/orchid-help-hint-layout)
+[![Total Downloads](https://img.shields.io/packagist/dt/leshkens/orchid-help-hint-layout.svg?style=flat-square)](https://packagist.org/packages/leshkens/orchid-help-hint-layout)
+
+![screenshot](https://user-images.githubusercontent.com/8939383/140321513-0abe9fe6-6b36-4da0-af61-a7ab4ca1c24d.png)
 
 ## Installation
 
-Install via composer:
+**Install via composer**: `composer require leshkens/orchid-help-hint-layout`
+
+_For old orchid versions:_
 
 | Orchid version                     | Composer command                                  |
 |-------------------------------------|---------------------------------------------------|

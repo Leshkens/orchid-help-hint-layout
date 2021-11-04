@@ -68,7 +68,7 @@ class HelpHintEditLayout extends Rows
                 ->required()
                 ->language('html')
                 ->lineNumbers(false)
-                ->help(__('Plain text or html. You can use') . ' <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/" title="Bootstrap">Bootstrap</a>')
+                ->help(__('Plain text or html. You can use') . ' <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" title="Bootstrap">Bootstrap</a>')
         ];
     }
 }
